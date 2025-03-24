@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Product list with cart</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="product-page">
+    <div>
+      <h1 id="title">Desserts</h1>
+      <div class="menu-container">
+        <div class="menu-item">
+          <div class="image-and-button">
+            <img src="assets/images/image-waffle-desktop.jpg" class="image-style"/>
+            <button class="add-to-cart" onclick="addToCart('Waffle with Berries', '6.50')"> <img src="./assets/images/icon-add-to-cart.svg"/> Add to Cart</button>
+          </div>
+          <h1 class="food-type"> Waffle </h1>
+          <h1 class="food-name"> Waffle with Berries </h1>
+          <h1 class="food-price"> $6.50 </h1>
+        </div>
+        <div class="menu-item">
+          <div class="image-and-button">
+            <img src="assets/images/image-creme-brulee-desktop.jpg" class="image-style"/>
+            <button class="add-to-cart" onclick="addToCart('Creme Brulee', '7.00')"> <img src="./assets/images/icon-add-to-cart.svg"/> Add to Cart</button>
+          </div>
+          <h1 class="food-type"> Crème Brulee  </h1>
+          <h1 class="food-name"> Vanilla Bean Crème Brulee </h1>
+          <h1 class="food-price"> $7.00 </h1>
+        </div>
+        <div class="menu-item">
+          <div class="image-and-button">
+            <img src="assets/images/image-macaron-desktop.jpg" class="image-style"/>
+            <button class="add-to-cart" onclick="addToCart('Macaron Mix of Five', '8.00')"><img src="./assets/images/icon-add-to-cart.svg"/> Add to Cart</button>
+          </div>
+          <h1 class="food-type"> Macaron </h1>
+          <h1 class="food-name"> Macaron Mix of Five </h1>
+          <h1 class="food-price"> $8.00 </h1>
+        </div>
+        <div class="menu-item">
+          <div class="image-and-button">
+            <img src="assets/images/image-tiramisu-desktop.jpg" class="image-style"/>
+            <button class="add-to-cart" onclick="addToCart('Classic Tiramisu', '5.50')"><img src="./assets/images/icon-add-to-cart.svg"/> Add to Cart</button>
+          </div>
+          <h1 class="food-type"> Tiramisu </h1>
+          <h1 class="food-name"> Classic Tiramisu </h1>
+          <h1 class="food-price"> $5.50 </h1>
+        </div>
+        <div class="menu-item">
+          <div class="image-and-button">
+            <img src="assets/images/image-baklava-desktop.jpg" class="image-style"/>
+            <button class="add-to-cart" onclick="addToCart('Pistachio Baklava', '4.00')"><img src="./assets/images/icon-add-to-cart.svg"/> Add to Cart</button>
+          </div>
+          <h1 class="food-type"> Baklava </h1>
+          <h1 class="food-name"> Pistachio Baklava </h1>
+          <h1 class="food-price"> $4.00 </h1>
+        </div>
+        <div class="menu-item">
+          <div class="image-and-button">
+            <img src="assets/images/image-meringue-desktop.jpg" class="image-style"/>
+            <button class="add-to-cart" onclick="addToCart('Lemon Meringue Pie', '5.00')"><img src="./assets/images/icon-add-to-cart.svg"/> Add to Cart</button>
+          </div>
+          <h1 class="food-type"> Pie </h1>
+          <h1 class="food-name"> Lemon Meringue Pie </h1>
+          <h1 class="food-price"> $5.00 </h1>
+        </div>
+        <div class="menu-item">
+          <div class="image-and-button">
+            <img src="assets/images/image-cake-desktop.jpg" class="image-style"/>
+            <button class="add-to-cart" onclick="addToCart('Red Velvet Cake', '4.50')"><img src="./assets/images/icon-add-to-cart.svg"/> Add to Cart</button>
+          </div>
+          <h1 class="food-type"> Cake </h1>
+          <h1 class="food-name"> Red Velvet Cake </h1>
+          <h1 class="food-price"> $4.50 </h1>
+        </div>
+        <div class="menu-item">
+          <div class="image-and-button">
+            <img src="assets/images/image-brownie-desktop.jpg" class="image-style"/>
+            <button class="add-to-cart" onclick="addToCart('Salted Caramel Brownie', '4.50')"><img src="./assets/images/icon-add-to-cart.svg"/> Add to Cart</button>
+          </div>
+          <h1 class="food-type"> Brownie </h1>
+          <h1 class="food-name"> Salted Caramel Brownie </h1>
+          <h1 class="food-price"> $4.50 </h1>
+        </div>
+        <div class="menu-item">
+          <div class="image-and-button">
+            <img src="assets/images/image-panna-cotta-desktop.jpg" class="image-style"/>
+            <button class="add-to-cart" onclick="addToCart('Vanilla Panna Cotta', '6.50')"><img src="./assets/images/icon-add-to-cart.svg"/> Add to Cart</button>
+          </div>
+          <h1 class="food-type"> Panna Cotta </h1>
+          <h1 class="food-name"> Vanilla Panna Cotta </h1>
+          <h1 class="food-price"> $6.50 </h1>
+        </div>
+      </div>
+    </div>
+    <div class="cart">
+      <h1 id="cart-title"> Your Cart (<span id="total">0</span>) </h1>
+      <div id="cart-items"></div>
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="myScript.js"></script>
+</body>
+</html>
