@@ -117,3 +117,37 @@
     font-weight: 700;
     font-size: 35px;
 }
+
+#confirm-button {
+    width: 100%; 
+    padding: 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-align: center;
+    background-color: hsl(14, 86%, 42%);
+    color: white;
+    font-size: 20px;
+}
+
+#confirm-button:hover {
+    background-color: hsla(14, 96%, 27%, 0.897);
+    cursor: pointer;
+}
+
+
+#carbon-neutral {
+    background-color: hsl(20, 50%, 98%);
+    padding: 22px;
+    text-align: center;
+    margin-block-end: 25px;
+}
+
+#tree {
+    position: relative;
+    top: 6px;
+    padding-right: 5px;
+}
+
+#tru:hover {
+    cursor: pointer;
+}

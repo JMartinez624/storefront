@@ -18,7 +18,7 @@
         <div class="menu-item">
           <div class="image-and-button">
             <img src="assets/images/image-waffle-desktop.jpg" class="image-style"/>
-            <button class="add-to-cart" onclick="addToCart('Waffle with Berries', '6.50')"> <img src="./assets/images/icon-add-to-cart.svg"/> <span id="add-text">Add to Cart</span></button>
+            <button class="add-to-cart" id="add-WafflewithBerries"> <span onclick="addToCart('Waffle with Berries', '6.50')"><img src="./assets/images/icon-add-to-cart.svg"/> <span id="add-text">Add to Cart</span></span></button>
           </div>
           <h1 class="food-type"> Waffle </h1>
           <h1 class="food-name"> Waffle with Berries </h1>
@@ -105,7 +105,12 @@
         <p id="order-total">Order Total</p>
         <p id="dollar">$<span id="cart-total">0.00</span></p>
       </div>
-      <button onclick=popUp()>Click Me</button>
+      <div id="carbon-neutral">
+        <img id="tree" src="assets/images/icon-carbon-neutral.svg">
+        This is a <b>carbon-neutral</b> delivery
+      </div>
+      <button id="confirm-button"> Confirm Order </button>
+      <!-- <button onclick=popUp()>Click Me</button> -->
     </div>
   </div>
   <script src="myScript.js"></script>
